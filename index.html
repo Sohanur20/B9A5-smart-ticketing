@@ -27,7 +27,22 @@
     .inter-font {
       font-family: "Inter", sans-serif;
     }
+
+
   </style>
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          clifford: '#da373d',
+          'primary': '#1DD100',
+        }
+      }
+    }
+  }
+</script>
 
 
   <title>Document</title>
@@ -35,6 +50,7 @@
 
 <body>
   <header class="container mx-auto">
+   <nav class="mx-auto">
     <div class="navbar bg-base-100">
       <div class="navbar-start">
         <div class="dropdown">
@@ -77,12 +93,32 @@
         </div>
 
       </div>
-
     </div>
+   </nav>
+
   </header>
 
 
-  <main>
+  <main class="container mx-auto">
+<!-- banner -->
+<section>
+ <div class="hero">
+  <div ><img style="background: linear-gradient(180deg, rgba(3, 7, 18, 0.50) 0%, rgba(3, 7, 18, 0.00) 100%) " class="lg:h-[550px] h-[350px] w-[1300px] rounded-3xl" src="./images/banner.png" alt=""></div>
+   
+  <div class="hero-content text-center text-neutral-content">
+    <div class="lg:-mt-32">
+      <h1 class="mb-5 lg:text-7xl text-2xl font-extrabold raleway-font">End-to-End Travel with <br> <span class="text-primary">P Paribahan</span></h1>
+      <p class="mb-5 inter-font lg:text-lg">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+      <button class="btn bg-primary border-none raleway-font font-bold lg:text-xl ">Buy Tickets</button>
+    </div>
+  </div>
+ </div>
+
+  
+
+</section>
+
+
 
   </main>
 
