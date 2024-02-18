@@ -1,8 +1,9 @@
 const parTicket = 550;
-
+let totaltiket = 20
 const seatButton = document.getElementsByClassName('seat')
 
 let count = 0
+
 
 for (const btn of seatButton) {
     btn.addEventListener('click', function (event) {
@@ -32,20 +33,32 @@ for (const btn of seatButton) {
         ticketPrice1.appendChild(createPTag3);
 
 
+        // total sit 
+
+        const totalSit = document.getElementById('set-left').innerText;
+        const convertSit = parseInt(totalSit)
+        const totalSitSum = convertSit - parseInt(1)
+       
+
+
         // total price 
 
-        const totalPrice = document.getElementById('total-price').innerText;
+        totalPrice('total-price', parseInt(parTicket))
+        // const totalPrice = document.getElementById('total-price').innerText;
 
-        const sum = parseInt(totalPrice )+ parseInt(parTicket);
+        // const sum = parseInt(totalPrice) + parseInt(parTicket);
 
-// grand-total
-
-const grandTotal = document.getElementById('grand-total').innerText;
+        // grand-total
 
 
-const grandTotalConvert = parseInt(grandTotal);
-const grandTotalSum = grandTotalConvert + parseInt(parTicket)
-console.log(grandTotalSum)
+
+
+        const grandTotal = document.getElementById('grand-total').innerText;
+
+
+        const grandTotalConvert = parseInt(grandTotal);
+        const grandTotalSum = grandTotalConvert + parseInt(parTicket)
+
 
 
 
@@ -55,10 +68,19 @@ console.log(grandTotalSum)
 
 
 
-        allIneerTextSet('total-price',sum)
-        allIneerTextSet('grand-total',grandTotalSum)
+
+        allIneerTextSet('grand-total', grandTotalSum)
+        allIneerTextSet('set-left', totalSitSum)
         allIneerTextSet('seat-count', count)
     })
+}
+
+
+function totalPrice(id, value) {
+    const totalPrice = document.getElementById(id).innerText;
+
+    const sum = parseInt(totalPrice) + parseInt(value);
+    allIneerTextSet(id, sum)
 }
 
 function allIneerTextSet(id, value) {
