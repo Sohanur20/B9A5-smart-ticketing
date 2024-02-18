@@ -1,4 +1,4 @@
-const parTicket = 550 ;
+const parTicket = 550;
 
 const seatButton = document.getElementsByClassName('seat')
 
@@ -7,14 +7,14 @@ let count = 0
 for (const btn of seatButton) {
     btn.addEventListener('click', function (event) {
 
-        count = count +  1 ;
+        count = count + 1;
 
 
         const seatButtonText = event.target.innerText
-       
+
 
         const ticketAndPrice = document.getElementById('count-price-ticket').childNodes[1];
-       
+
 
 
         const createPTag = document.createElement('p');
@@ -32,16 +32,31 @@ for (const btn of seatButton) {
         ticketPrice1.appendChild(createPTag3);
 
 
-// total price 
+        // total price 
 
-const totalPrice = document.getElementById('total-price').innerText ;
+        const totalPrice = document.getElementById('total-price').innerText;
 
-  const totalPrices =parseInt(totalPrice)
-  document.getElementById('total-price').innerText = totalPrices + parseInt(parTicket);
+        const sum = parseInt(totalPrice )+ parseInt(parTicket);
+
+// grand-total
+
+const grandTotal = document.getElementById('grand-total').innerText;
+
+
+const grandTotalConvert = parseInt(grandTotal);
+const grandTotalSum = grandTotalConvert + parseInt(parTicket)
+console.log(grandTotalSum)
+
+
+
+        // const totalPrices = parseInt(totalPrice)
+        // document.getElementById('total-price').innerText = parseInt(sum);
 
 
 
 
+        allIneerTextSet('total-price',sum)
+        allIneerTextSet('grand-total',grandTotalSum)
         allIneerTextSet('seat-count', count)
     })
 }
