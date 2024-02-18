@@ -1,29 +1,48 @@
+const parTicket = 550 ;
 
-
-const seatButton = document.getElementsByTagName('p')
+const seatButton = document.getElementsByClassName('seat')
 
 let count = 0
 
 for (const btn of seatButton) {
     btn.addEventListener('click', function (event) {
-        count = count + 1
 
-     
-        const sitList = event.target.innerText;
-
-        const selectSitContainer = document.getElementById('select-sit-container')
-        const li = document.createElement('li')
-        const h2 = document.createElement('h2');
-        h2.innerText = sitList;
+        count = count +  1 ;
 
 
-        li.appendChild(h2)
-        
-      
+        const seatButtonText = event.target.innerText
+       
 
-        selectSitContainer.appendChild(li)
+        const ticketAndPrice = document.getElementById('count-price-ticket').childNodes[1];
+       
 
-        allIneerTextSet('set-count', count)
+
+        const createPTag = document.createElement('p');
+        createPTag.innerText = seatButtonText;
+        ticketAndPrice.appendChild(createPTag);
+
+        const ticketPrice = document.getElementById('count-price-ticket').childNodes[3];
+        const createPTag2 = document.createElement('p');
+        createPTag2.innerText = "Economy";
+        ticketPrice.appendChild(createPTag2);
+
+        const ticketPrice1 = document.getElementById('count-price-ticket').childNodes[5];
+        const createPTag3 = document.createElement('p');
+        createPTag3.innerText = parTicket;
+        ticketPrice1.appendChild(createPTag3);
+
+
+// total price 
+
+const totalPrice = document.getElementById('total-price').innerText ;
+
+  const totalPrices =parseInt(totalPrice)
+  document.getElementById('total-price').innerText = totalPrices + parseInt(parTicket);
+
+
+
+
+        allIneerTextSet('seat-count', count)
     })
 }
 
