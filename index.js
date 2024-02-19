@@ -38,33 +38,24 @@ for (const btn of seatButton) {
         const totalSit = document.getElementById('set-left').innerText;
         const convertSit = parseInt(totalSit)
         const totalSitSum = convertSit - parseInt(1)
-       
+
 
 
         // total price 
 
         totalPrice('total-price', parseInt(parTicket))
-        // const totalPrice = document.getElementById('total-price').innerText;
 
-        // const sum = parseInt(totalPrice) + parseInt(parTicket);
 
         // grand-total
 
-
-
-
         const grandTotal = document.getElementById('grand-total').innerText;
-
 
         const grandTotalConvert = parseInt(grandTotal);
         const grandTotalSum = grandTotalConvert + parseInt(parTicket)
 
 
 
-
-        // const totalPrices = parseInt(totalPrice)
-        // document.getElementById('total-price').innerText = parseInt(sum);
-
+        //discount 
 
 
 
@@ -74,6 +65,16 @@ for (const btn of seatButton) {
         allIneerTextSet('seat-count', count)
     })
 }
+
+    // discount- apply
+
+  const discount = document.getElementById('apply-btn').innerText
+  console.log(discount)
+
+
+
+
+
 
 
 function totalPrice(id, value) {

@@ -188,14 +188,14 @@
     </section>
 
     <!-- P.H Paribahan -->
-    <section id="ticketCounter" class="bg-[#F7F8F8] rounded-3xl border-none ">
+    <section id="ticketCounter" class="bg-[#F7F8F8] rounded-3xl  border-t-8 mt-20 border-primary">
 
       <div class="lg:flex-grow flex-col">
 
         <div class="text-center mt-32">
-          <div class="pt-20">
+          <div class="pt-10">
             <h2 class="raleway-font lg:text-[40px] text-2xl font-bold mb-6 ">P.H Paribahan</h2>
-            <p class="inter-font lg:text-lg text-sm font-normal text-[#03071299] mb-20">Yes, you can run unit tests and
+            <p class="inter-font lg:text-lg text-sm font-normal text-[#03071299] mb-16">Yes, you can run unit tests and
               view the results
               directly within the app. The integrated <br> testing features allow for a streamlined .</p>
           </div>
@@ -361,13 +361,16 @@
               <h4 class="text-lg font-semibold">Total Price</h4>
               <p class="text-lg font-semibold">BDT <span id="total-price">0</span></p>
           </div>
-          <div id="discount-div" class="mt-5">
-              <label class="input input-bordered flex items-center gap-2">
-                  <input id="discount-input" type="text" class="grow" placeholder="Coupon" />
-                  <button id="discount-btn" disabled
-                      class="btn btn-xs rounded-full my-1 bg-green-400 text-white">Apply</button>
-              </label>
-          </div>
+
+<div id="apply-btn">
+  <label class="input input-bordered flex items-center ">
+    <input id="apply-input" type="text" class="grow " placeholder="Have any copupon?" />
+   <button id="apply" class="btn w-[100px] text-white bg-primary">Apply</button>
+  </label>
+</div>
+
+
+
 
           <div class="flex justify-between mt-5">
               <h4 class="text-lg font-semibold">Grand Total</h4>
