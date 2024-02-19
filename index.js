@@ -1,21 +1,25 @@
 const parTicket = 550;
 let totaltiket = 20
-const seatButton = document.getElementsByClassName('seat')
 
-
-
+let seatBg = 0
 let count = 0
 
+const seatButton = document.getElementsByClassName('seat')
 
 for (const btn of seatButton) {
     btn.addEventListener('click', function (event) {
 
+  
+
+        if (seatBg !== 4 ) {
+            btn.classList.add('bg-green-500');
+            btn.classList.add('text-white');
+        }
+          
+
+        
         count = count + 1;
-
-
         const seatButtonText = event.target.innerText
-
-
         const ticketAndPrice = document.getElementById('count-price-ticket').childNodes[1];
 
 
@@ -56,12 +60,6 @@ for (const btn of seatButton) {
         const grandTotalSum = grandTotalConvert + parseInt(parTicket)
 
 
-  
-
-       
-
-
-
 
         allIneerTextSet('grand-total', grandTotalSum)
         allIneerTextSet('set-left', totalSitSum)
@@ -71,26 +69,6 @@ for (const btn of seatButton) {
 
 
  
-
-
-          // discount- apply
-
-          const applyBtn = document.getElementById('apply-btn');
-          applyBtn.addEventListener('click', function (){
-        
-        
-            // input value 
-        
-            const inputCupon = document.getElementById('apply-input').value
-           
-            if(inputCupon == 'NEW 15'){
-               const discountElement = document.getElementById('')
-            }
-        
-          })
-
-
-
 
 function totalPrice(id, value) {
     const totalPrice = document.getElementById(id).innerText;
