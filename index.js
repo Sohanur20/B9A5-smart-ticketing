@@ -2,6 +2,8 @@ const parTicket = 550;
 let totaltiket = 20
 const seatButton = document.getElementsByClassName('seat')
 
+
+
 let count = 0
 
 
@@ -54,8 +56,9 @@ for (const btn of seatButton) {
         const grandTotalSum = grandTotalConvert + parseInt(parTicket)
 
 
+  
 
-        //discount 
+       
 
 
 
@@ -66,13 +69,25 @@ for (const btn of seatButton) {
     })
 }
 
-    // discount- apply
 
-  const discount = document.getElementById('apply-btn').innerText
-  console.log(discount)
+ 
 
 
+          // discount- apply
 
+          const applyBtn = document.getElementById('apply-btn');
+          applyBtn.addEventListener('click', function (){
+        
+        
+            // input value 
+        
+            const inputCupon = document.getElementById('apply-input').value
+           
+            if(inputCupon == 'NEW 15'){
+               const discountElement = document.getElementById('')
+            }
+        
+          })
 
 
 
